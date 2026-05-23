@@ -1,32 +1,27 @@
-// Wait until the entire HTML document is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
+// Wait until the complete DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Grab the button element from the DOM
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    // 2. Listen for scroll events on the window
-    window.onscroll = function() {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        // If the user scrolls down more than 300px from the top, show the button
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            scrollTopBtn.style.display = "block";
-        } else {
-            // Otherwise, keep it hidden
-            scrollTopBtn.style.display = "none";
-        }
+    // 1. Create the toggle button dynamically
+    const themeToggle = document.createElement('button');
+    themeToggle.id = 'theme-toggle';
+    themeToggle.innerHTML = '🌙'; // Default moon icon for dark mode
+    themeToggle.setAttribute('aria-label', 'Toggle theme light or dark');
+    
+    // 2. Inject the button directly into the navigation bar
+    const navContainer = document.querySelector('nav');
+    if (navContainer) {
+        navContainer.appendChild(themeToggle);
     }
 
-    // 3. When the user clicks the button, smoothly snap back to the top
-    scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth" // Gives it that elegant sliding animation
-        });
+    // 3. Add an event listener to handle the click action
+    themeToggle.addEventListener('click', () => {
+        // Toggle the 'light-theme' class on the root <html> element
+        const isLightTheme = document.documentElement.classList.toggle('light-theme');
+        
+        // Update the button icon based on the active theme state
+        themeToggle.innerHTML = isLightTheme ? '☀️' : '🌙';
+        
+        // Optional: Log state to console for debugging
+        console.log(`Theme toggled. Light theme active: ${isLightTheme}`);
     });
-
-    // Console log just to verify our file is linked up and running perfectly
-    console.log("Portfolio interactive scripts loaded successfully!");
 });
