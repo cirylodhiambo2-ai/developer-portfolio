@@ -14,7 +14,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -23,11 +23,11 @@
     <section id="about" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Ciryl Odhiambo</span></h1>
-            <p class="subtitle">Freelance Web Developer</p>
+            <p class="subtitle">Web Developer & UI Specialist</p>
             <p class="description">
-                I help businesses and individuals build high-performing, responsive websites that drive results. From sleek landing pages to robust web applications, I turn your digital vision into a reality using clean code and modern design. Let's elevate your online presence.
+                I help businesses and individuals build high-performing, responsive websites that drive results. From sleek landing pages to robust web applications, I turn your digital vision into a reality using clean code and modern design.
             </p>
-            <a href="#contact" class="btn">Let's Work Together</a>
+            <a href="#contact" class="btn">Discuss Your Project</a>
         </div>
     </section>
 
@@ -38,68 +38,45 @@
             <div class="skill-card">CSS3</div>
             <div class="skill-card">JavaScript</div>
             <div class="skill-card">Python</div>
-            <div class="skill-card">Responsive Design</div>
+            <div class="skill-card">Responsive UI</div>
+            <div class="skill-card">Git</div>
         </div>
     </section>
 
     <section id="projects" class="projects-section">
-        <h2>Featured Work</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card" onclick="openModal('modal-1')">
-                <h3>Modern E-Commerce Storefront</h3>
-                <p>A high-converting, fully responsive e-commerce layout designed for optimal user experience.</p>
+        <h2>Featured Showcase</h2>
+        
+        <div class="projects-container">
+            <div class="project-card single-card" onclick="openModal('project-modal')">
+                <h3>Fully Responsive E-Commerce Platform</h3>
+                <p>A high-converting, modern e-commerce storefront designed for seamless shopping experiences across all devices.</p>
                 <div class="tags">
                     <span class="tag">UI/UX</span>
+                    <span class="tag">HTML/CSS</span>
                     <span class="tag">JavaScript</span>
                 </div>
-                <button class="view-btn">Tap to View</button>
+                <button class="view-btn">Tap to View Details</button>
             </div>
-
-            <div class="project-card" onclick="openModal('modal-2')">
-                <h3>Business Analytics Dashboard</h3>
-                <p>An interactive data visualization dashboard featuring a sleek dark-mode UI and dynamic layout.</p>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Logic</span>
-                </div>
-                <button class="view-btn">Tap to View</button>
-            </div>
-
         </div>
     </section>
 
-    <div id="modal-1" class="modal">
+    <div id="project-modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modal-1')">&times;</span>
-            <h2>Modern E-Commerce Storefront</h2>
+            <span class="close-btn" onclick="closeModal('project-modal')">&times;</span>
+            <h2>Responsive E-Commerce Platform</h2>
             <div class="modal-body">
-                <div class="project-placeholder">🛒 Visual Preview Area</div>
-                <p>This project features a dynamic shopping interface, smooth animations, and a highly responsive design that looks perfect on both mobile phones and desktop displays. It is optimized to help businesses showcase their products effectively.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-2" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modal-2')">&times;</span>
-            <h2>Business Analytics Dashboard</h2>
-            <div class="modal-body">
-                <div class="project-placeholder">📊 Dashboard Preview Area</div>
-                <p>A sleek, professional dashboard interface built for data management. It utilizes modern structural layouts to display complex information in a clean, easily digestible format for business owners.</p>
+                <div class="project-placeholder">🛒 Interactive UI Showcase</div>
+                <p><strong>Overview:</strong> This showcase project demonstrates advanced frontend architecture. It features a dynamic product grid, a reactive shopping cart modal, smooth transitions, and a layout that adapts flawlessly from desktop widescreen to mobile phone displays.</p>
+                <p><strong>Core Focus:</strong> Performance optimization, accessibility, and intuitive user flow to increase customer conversion rates.</p>
             </div>
         </div>
     </div>
 
     <footer id="contact">
         <h2>Let's Start a Project</h2>
-        <p>Looking for a developer to bring your idea to life? Reach out to me directly:</p>
+        <p>Ready to elevate your online presence? Looking for a developer focused on quality and responsiveness?</p>
         
-        <div class="social-links">
-            <a href="https://wa.me/254119449160" target="_blank" class="social-btn whatsapp">WhatsApp</a>
-            <a href="https://instagram.com/__cirylle" target="_blank" class="social-btn instagram">Instagram</a>
-            <a href="https://github.com/cirylodhiambo2-ai" target="_blank" class="social-btn github">GitHub</a>
-        </div>
+        <p class="contact-cta">Message me directly on Freelancer to discuss how we can bring your vision to life.</p>
         
         <p class="copyright">&copy; 2026 Ciryl Odhiambo. All rights reserved.</p>
     </footer>
