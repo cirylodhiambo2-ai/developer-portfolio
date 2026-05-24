@@ -3,61 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciryl Odhiambo | Developer Portfolio</title>
+    <title>Ciryl Odhiambo | Web Developer</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">Ciryl Odhiambo</div>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">CO.</div>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Hi, I'm Ciryl Odhiambo</h1>
-        <p>A high-achieving developer specializing in clean front-end interfaces and robust backend Python logic.</p>
-        <a href="#projects" class="btn">View My Work</a>
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Ciryl Odhiambo</span></h1>
+            <p class="subtitle">Freelance Web Developer</p>
+            <p class="description">
+                I help businesses and individuals build high-performing, responsive websites that drive results. From sleek landing pages to robust web applications, I turn your digital vision into a reality using clean code and modern design. Let's elevate your online presence.
+            </p>
+            <a href="#contact" class="btn">Let's Work Together</a>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
+    <section id="skills" class="skills-section">
+        <h2>My Tech Stack</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Responsive Design</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Featured Work</h2>
         <div class="projects-grid">
             
-            <div class="project-card">
-                <h3>Robot Race Simulation</h3>
-                <p>A Python backend application utilizing object-oriented programming to simulate competitive algorithmic racing logic.</p>
-                <span class="tech-tag">Python</span>
-                <div class="project-links">
-                    <a href="#">GitHub Repo</a>
+            <div class="project-card" onclick="openModal('modal-1')">
+                <h3>Modern E-Commerce Storefront</h3>
+                <p>A high-converting, fully responsive e-commerce layout designed for optimal user experience.</p>
+                <div class="tags">
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">JavaScript</span>
                 </div>
+                <button class="view-btn">Tap to View</button>
             </div>
 
-            <div class="project-card">
-                <h3>Web Development Tasks</h3>
-                <p>A collection of responsive, interactive user interface components built using clean HTML, CSS, and modern JavaScript.</p>
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-                <div class="project-links">
-                    <a href="#">Live Demo</a>
-                    <a href="#">GitHub Repo</a>
+            <div class="project-card" onclick="openModal('modal-2')">
+                <h3>Business Analytics Dashboard</h3>
+                <p>An interactive data visualization dashboard featuring a sleek dark-mode UI and dynamic layout.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Logic</span>
                 </div>
+                <button class="view-btn">Tap to View</button>
             </div>
 
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>I am always looking to collaborate on innovative technology and engineering projects.</p>
-        <a href="mailto:cirylodhiambo2@gmail.com">Email Me</a>
-    </section>
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-1')">&times;</span>
+            <h2>Modern E-Commerce Storefront</h2>
+            <div class="modal-body">
+                <div class="project-placeholder">🛒 Visual Preview Area</div>
+                <p>This project features a dynamic shopping interface, smooth animations, and a highly responsive design that looks perfect on both mobile phones and desktop displays. It is optimized to help businesses showcase their products effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-2')">&times;</span>
+            <h2>Business Analytics Dashboard</h2>
+            <div class="modal-body">
+                <div class="project-placeholder">📊 Dashboard Preview Area</div>
+                <p>A sleek, professional dashboard interface built for data management. It utilizes modern structural layouts to display complex information in a clean, easily digestible format for business owners.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <h2>Let's Start a Project</h2>
+        <p>Looking for a developer to bring your idea to life? Reach out to me directly:</p>
+        
+        <div class="social-links">
+            <a href="https://wa.me/254119449160" target="_blank" class="social-btn whatsapp">WhatsApp</a>
+            <a href="https://instagram.com/__cirylle" target="_blank" class="social-btn instagram">Instagram</a>
+            <a href="https://github.com/cirylodhiambo2-ai" target="_blank" class="social-btn github">GitHub</a>
+        </div>
+        
+        <p class="copyright">&copy; 2026 Ciryl Odhiambo. All rights reserved.</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

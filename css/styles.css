@@ -1,273 +1,97 @@
-/* ==========================================================================
-   1. GLOBAL RESETS & VARIABLES
-   ========================================================================== */
-:root {
-    --bg-color: #0f172a;       /* Deep slate/navy background */
-    --card-bg: #1e293b;        /* Slightly lighter slate for cards */
-    --text-main: #f8fafc;      /* Clean off-white for crisp reading */
-    --text-muted: #94a3b8;     /* Muted gray for descriptions */
-    --accent: #38bdf8;         /* Tech blue accent for highlights/links */
-    --accent-hover: #7dd3fc;   /* Lighter blue for active states */
-    --font-stack: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
+/* --- NEW ADDITIONS FOR MODALS AND BUTTONS --- */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-family: var(--font-stack);
-    background-color: var(--bg-color);
-    color: var(--text-main);
-}
-
-body {
-    line-height: 1.6;
-}
-
-/* ==========================================================================
-   2. NAVIGATION BAR
-   ========================================================================== */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(15, 23, 42, 0.9); /* Translucent blend */
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    border-bottom: 1px solid #334155;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.2rem 2rem;
-}
-
-nav .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--accent);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav ul a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-}
-
-nav ul a:hover {
-    color: var(--accent);
-}
-
-/* ==========================================================================
-   3. HERO SECTION
-   ========================================================================== */
-#hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-#hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
-}
-
-#hero p {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin-bottom: 2rem;
-}
-
-/* Interactive Call-to-Action Button */
-.btn {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--accent);
-    border: 2px solid var(--accent);
-    padding: 0.75rem 1.75rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: rgba(56, 189, 248, 0.1);
-    color: var(--accent-hover);
-    border-color: var(--accent-hover);
-}
-
-/* ==========================================================================
-   4. PROJECTS SECTION (Flexbox / Grid Layout)
-   ========================================================================== */
-#projects {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 6rem 2rem;
-}
-
-#projects h2 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-/* The Grid Container */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Individual Project Cards */
-.project-card {
-    background-color: var(--card-bg);
-    border: 1px solid #334155;
-    padding: 2rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    border-color: #475569;
-}
-
-.project-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
-}
-
-.project-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    flex-grow: 1; /* Pushes content down evenly */
-}
-
-/* Tech Badges */
-.tech-tag {
-    display: inline-block;
-    background-color: rgba(56, 189, 248, 0.1);
-    color: var(--accent);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 100px;
-    margin-right: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.project-links a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-.project-links a:hover {
-    color: var(--accent);
-}
-
-/* ==========================================================================
-   5. CONTACT SECTION
-   ========================================================================== */
-#contact {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 6rem 2rem 10rem 2rem;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#contact p {
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-}
-
-#contact a {
-    display: inline-block;
-    background-color: var(--accent);
-    color: var(--bg-color);
-    padding: 0.75rem 2rem;
-    font-weight: 700;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-}
-
-#contact a:hover {
-    background-color: var(--accent-hover);
-}
-/* ==========================================================================
-   6. INTERACTIVE THEME STYLES (JavaScript Driven)
-   ========================================================================== */
-
-/* Theme Toggle Button Styling */
-#theme-toggle {
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
+/* Project Card Tap Button */
+.view-btn {
+    margin-top: 1rem;
+    background: none;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-card:hover .view-btn {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* Modal Background (Hidden by default) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.85); 
+    backdrop-filter: blur(4px);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #1e293b;
+    margin: 15% auto; 
+    padding: 2.5rem; 
+    border: 1px solid #38bdf8; 
+    width: 85%; 
+    max-width: 600px; 
+    border-radius: 12px; 
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    color: #94a3b8;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f8fafc;
+}
+
+.project-placeholder {
+    background: #0f172a;
+    padding: 4rem 1rem;
+    text-align: center;
+    margin: 1.5rem 0;
     border-radius: 8px;
+    color: #38bdf8;
+    border: 1px dashed #334155;
+    font-size: 1.2rem;
+}
+
+/* Social Contact Buttons */
+.social-links {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    transition: all 0.2s ease;
+    gap: 1rem;
+    margin: 2rem 0;
 }
 
-#theme-toggle:hover {
-    background-color: rgba(56, 189, 248, 0.1);
-    transform: scale(1.05);
+.social-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s;
 }
 
-/* Light Theme Variables - Applied when JavaScript adds the class */
-html.light-theme {
-    --bg-color: #f8fafc;       /* Clean bright background */
-    --card-bg: #ffffff;        /* Pure white for elevation cards */
-    --text-main: #0f172a;      /* Deep dark slate for readable text */
-    --text-muted: #475569;     /* Medium slate for body text */
-    --accent: #0284c7;         /* Deeper blue for better contrast in light mode */
-    --accent-hover: #0369a1;
+.social-btn:hover {
+    transform: translateY(-3px);
+    color: white;
 }
 
-/* Smooth transition when swapping themes */
-html, body, .project-card, header, #theme-toggle {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
+.whatsapp { background-color: #25D366; color: white; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+.github { background-color: #334155; color: white; }
+.copyright { font-size: 0.9rem; margin-top: 2rem;}
