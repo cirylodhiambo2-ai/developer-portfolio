@@ -4,83 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciryl Odhiambo | Web Developer</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">CO.</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="typing-text">Hi, I'm <span class="highlight">Ciryl Odhiambo</span>.</h1>
+            <p class="subtitle">I build fast, responsive, and modern web solutions tailored for your business using HTML, CSS, JavaScript, and Python.</p>
+            <a href="#contact" class="btn primary-btn">Let's Build Something</a>
+        </div>
     </header>
 
-    <section id="about" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Ciryl Odhiambo</span></h1>
-            <p class="subtitle">Web Developer & UI Specialist</p>
-            <p class="description">
-                I help businesses and individuals build high-performing, responsive websites that drive results. From sleek landing pages to robust web applications, I turn your digital vision into a reality using clean code and modern design.
-            </p>
-            <a href="#contact" class="btn">Discuss Your Project</a>
+    <!-- The First Client Pitch (The Edge) -->
+    <section id="the-offer" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">The "Foundational Client" Offer</h2>
+            <div class="card">
+                <h3>Take advantage of my launch.</h3>
+                <p>I am actively launching my freelance web development practice and looking for my <strong>first official client</strong> to build my public portfolio. If you take a chance on me, here is my guarantee:</p>
+                <ul class="feature-list">
+                    <li><strong>Unmatched Dedication:</strong> Your project won't be one of twenty. It will be my sole focus, receiving my 100% undivided attention until it is perfect.</li>
+                    <li><strong>Exclusive Pricing:</strong> In exchange for being my first review, you will receive premium, custom-coded web development at a heavily discounted, highly affordable rate.</li>
+                    <li><strong>Proven Discipline:</strong> I bring the exact same rigorous analytical focus and extreme dedication that earned me 84 points and an Equity Leaders Program scholarship straight to your codebase.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section id="skills" class="skills-section">
-        <h2>My Tech Stack</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Responsive UI</div>
-            <div class="skill-card">Git</div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h2>Featured Showcase</h2>
-        
-        <div class="projects-container">
-            <div class="project-card single-card" onclick="openModal('project-modal')">
-                <h3>Fully Responsive E-Commerce Platform</h3>
-                <p>A high-converting, modern e-commerce storefront designed for seamless shopping experiences across all devices.</p>
-                <div class="tags">
-                    <span class="tag">UI/UX</span>
-                    <span class="tag">HTML/CSS</span>
-                    <span class="tag">JavaScript</span>
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">What I Bring to the Table</h2>
+            <div class="grid">
+                <div class="service-box">
+                    <div class="icon">💻</div>
+                    <h3>Custom Frontend Development</h3>
+                    <p>Clean, mobile-first websites coded from scratch that look stunning on any device.</p>
                 </div>
-                <button class="view-btn">Tap to View Details</button>
+                <div class="service-box">
+                    <div class="icon">⚡</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Fast-loading layouts and smooth interactivity engineered to keep your customers engaged.</p>
+                </div>
+                <div class="service-box">
+                    <div class="icon">⚙️</div>
+                    <h3>Python Automation</h3>
+                    <p>Custom scripts and backend logic to streamline workflows and solve complex business problems.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('project-modal')">&times;</span>
-            <h2>Responsive E-Commerce Platform</h2>
-            <div class="modal-body">
-                <div class="project-placeholder">🛒 Interactive UI Showcase</div>
-                <p><strong>Overview:</strong> This showcase project demonstrates advanced frontend architecture. It features a dynamic product grid, a reactive shopping cart modal, smooth transitions, and a layout that adapts flawlessly from desktop widescreen to mobile phone displays.</p>
-                <p><strong>Core Focus:</strong> Performance optimization, accessibility, and intuitive user flow to increase customer conversion rates.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-bg">
+        <div class="container">
+            <h2 class="section-title">Claim the First Client Offer</h2>
+            <p class="contact-subtitle">Skip the agency fees. Let's discuss your project today.</p>
+            
+            <div class="contact-grid">
+                <a href="https://wa.me/254119449160" target="_blank" class="contact-link whatsapp">
+                    <span class="icon">💬</span> WhatsApp
+                </a>
+                <a href="tel:+254119449160" class="contact-link call">
+                    <span class="icon">📞</span> Direct Call
+                </a>
+                <a href="mailto:cirylodhiambo2@gmail.com" class="contact-link email">
+                    <span class="icon">✉️</span> Email Me
+                </a>
+                <a href="https://instagram.com/odhiambo.tech" target="_blank" class="contact-link instagram">
+                    <span class="icon">📸</span> @odhiambo.tech
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer id="contact">
-        <h2>Let's Start a Project</h2>
-        <p>Ready to elevate your online presence? Looking for a developer focused on quality and responsiveness?</p>
-        
-        <p class="contact-cta">Message me directly on Freelancer to discuss how we can bring your vision to life.</p>
-        
-        <p class="copyright">&copy; 2026 Ciryl Odhiambo. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2026 Ciryl Odhiambo. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
